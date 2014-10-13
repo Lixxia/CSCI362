@@ -16,26 +16,26 @@ def main():
 
 	# nginx tests 1-3
 	nginx_list = getlist('nginxTests')
-	print("NGINX METHOD TESTS")
+	print("<h1>NGINX METHOD TESTS</h1>")
 	i=0
 	for url in nginx_list:
 		i+=1
-		print("==================")
-		print("Test " + str(i))
-		print("Test input: " + url)
-		print("Expected Outcome: " + str(served_by_nginx(url)))
-		print("Actual Outcome: " + str(served_by_nginx(url)))
+		print("<hr>")
+		print("<br><b>Test " + str(i) +"</b>")
+		print("<br><b>Test input:</b> " + url)
+		print("<br><b>Expected Outcome:</b> " + str(served_by_nginx(url)))
+		print("<br><b>Actual Outcome:</b> " + str(served_by_nginx(url)))
 
 	#Django tests 4-6
 	django_list = getlist('djangoTests')
-	print("\nDJANGO METHOD TESTS")
+	print("<br><br><h1>DJANGO METHOD TESTS</h1>")
 	i=3
 	for url in django_list:
 		i+=1
-		print("==================")
-		print("Test " + str(i))
-		print("Test input: " + url)
-		print("Expected Outcome: " + str(served_by_django(url)))
-		print("Actual Outcome: " + str(served_by_django(url)))
+		print("<hr>")
+		print("<br><b>Test " + str(i) + "</b>")
+		print("<br><b>Test input:</b> " + url)
+		print("<br><b>Expected Outcome:</b> " + str(served_by_django(url)))
+		print("<br><b>Actual Outcome:</b> " + str(served_by_django(url)))
 
 main()
