@@ -21,7 +21,7 @@ The proxy file `nginx_smoke_test.py` currently contains a literal path to the rt
 **Each Test Case**
 Test case txt files will be formatted as follows:
 - test number: 
+- requirement: 
 - method: 
 - input: 
 - oracle: 
-- requirement: 
