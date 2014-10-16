@@ -1,7 +1,3 @@
-#import sys
-
-#sys.path.append('/home/lixxia/rtd/checkouts/readthedocs.org/deploy/')
-
 from nginx_smoke_test import * #import proxy
 
 def getlist(filename):

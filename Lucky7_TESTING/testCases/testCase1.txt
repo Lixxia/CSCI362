@@ -1,0 +1,6 @@
+test number: 1
+requirement: url is served by nginx and return 200 OK
+method: served_by_nginx
+input: https://pip.readthedocs.org/en/latest/
+oracle: true
+
