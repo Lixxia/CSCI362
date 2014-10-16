@@ -15,10 +15,7 @@ Repository structured according to Team Project Specifications. Should be the sa
 ## To run
 There is a short bash script that will run the test.py file. Go to the top level directory (Lucky7_TESTING) and type in `./scripts/runAllTests.sh`. 
 
-**NOTE**
-The proxy file `nginx_smoke_test.py` currently contains a literal path to the rtd file. For now, it must be changed in order for the tests to run sucessfully.
-
-**Each Test Case**
+## Each Test Case
 Test case txt files will be formatted as follows:
 - test number: 
 - requirement: 
