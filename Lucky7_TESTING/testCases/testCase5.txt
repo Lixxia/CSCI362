@@ -1,5 +1,5 @@
-test number: 5
-requirement: url is served by nginx and return 200 OK
-method: served_by_nginx
-input: https://pip.readthedocs.org/en/1.4.1/news.html
-oracle: true
+5
+url is served by nginx and return 200 OK
+served_by_nginx
+https://pip.readthedocs.org/en/1.4.1/news.html
+True

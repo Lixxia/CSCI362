@@ -1,5 +1,5 @@
-7
+22
 url is served by nginx and return 200 OK
 served_by_nginx
-http://phpmyadmin.readthedocs.org/ja/latest/
-True
+http://www.microsoft.com
+False

@@ -1,5 +1,5 @@
-test number: 10
-requirement: url is served by nginx and return 200 OK
-method: served_by_nginx
-input: https://ericholschercom.readthedocs.org/en/latest/
-oracle: true
+10
+url is served by nginx and return 200 OK
+served_by_nginx
+https://ericholschercom.readthedocs.org/en/latest/
+True

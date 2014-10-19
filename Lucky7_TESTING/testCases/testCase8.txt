@@ -1,5 +1,5 @@
-test number: 8
-requirement: url is served by nginx and return 200 OK
-method: served_by_nginx
-input: http://phpmyadmin.readthedocs.org/cs/latest/
-oracle: true
+8
+url is served by nginx and return 200 OK
+served_by_nginx
+http://phpmyadmin.readthedocs.org/cs/latest/
+True
