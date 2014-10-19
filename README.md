@@ -21,3 +21,5 @@ Test case txt files will be formatted as follows:
 - input 
 - oracle
     - Note: oracle must be in the format `True` or `False` 
+
+File must be saved in the form `testCase[num].txt`.
