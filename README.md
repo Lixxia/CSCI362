@@ -8,17 +8,16 @@ Repository for Team Lucky 7s:
 
 Contains student-created test materials for readthedocs.org.
 
-Repository structured according to Team Project Specifications. Should be the same as on SVN. 
-
-**Currently this only works if the text files containg the tested urls are in the same directory as test.py. We need to figure out a way to reference it from a path, as it needs to be structured differently.**
+Structured according to Team Project Specifications.
 
 ## To run
 There is a short bash script that will run the test.py file. Go to the top level directory (Lucky7_TESTING) and type in `./scripts/runAllTests.sh`. 
 
 ## Each Test Case
 Test case txt files will be formatted as follows:
-- test number: 
-- requirement: 
-- method: 
-- input: 
-- oracle: 
+- test number
+- requirement 
+- method 
+- input 
+- oracle
+    - Note: oracle must be in the format `True` or `False` 
