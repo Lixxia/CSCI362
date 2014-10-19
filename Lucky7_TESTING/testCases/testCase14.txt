@@ -1,0 +1,6 @@
+14
+url is served by nginx and return 200 OK
+served_by_nginx
+http://docs.pylonsproject.org/projects/pyramid-amon/en/latest/genindex.html
+True
+

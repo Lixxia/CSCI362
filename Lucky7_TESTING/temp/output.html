@@ -1,32 +1,266 @@
-<h1>NGINX METHOD TESTS</h1>
-<hr>
-<br><b>Test 1</b>
-<br><b>Test input:</b> https://pip.readthedocs.org/en/latest/
-<br><b>Expected Outcome:</b> True
-<br><b>Actual Outcome:</b> True
-<hr>
-<br><b>Test 2</b>
-<br><b>Test input:</b> http://docs.fabfile.org/en/latest/
-<br><b>Expected Outcome:</b> True
-<br><b>Actual Outcome:</b> True
-<hr>
-<br><b>Test 3</b>
-<br><b>Test input:</b> http://cs.cofc.edu
-<br><b>Expected Outcome:</b> False
-<br><b>Actual Outcome:</b> False
-<br><br><h1>DJANGO METHOD TESTS</h1>
-<hr>
-<br><b>Test 4</b>
-<br><b>Test input:</b> https://readthedocs.org/security/
-<br><b>Expected Outcome:</b> True
-<br><b>Actual Outcome:</b> True
-<hr>
-<br><b>Test 5</b>
-<br><b>Test input:</b> http://www.microsoft.com
-<br><b>Expected Outcome:</b> False
-<br><b>Actual Outcome:</b> False
-<hr>
-<br><b>Test 6</b>
-<br><b>Test input:</b> http://www.apple.com
-<br><b>Expected Outcome:</b> True
-<br><b>Actual Outcome:</b> True
+
+<link href='http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css' 
+rel='stylesheet'>
+<style> 
+table, th, td {
+	border: 1px solid black;
+	border-collapse: collapse; }
+th, td {
+	padding: 5px;
+	text-align: center; }
+.tooltip {
+	display:inline;
+	position:relative; }
+.tooltip:hover:after { 
+	background:#333; 
+	background:rgba(0,0,0,.8); 
+	border-radius: 5px;
+	bottom: -3px; 
+	color: #fff;
+	content: attr(name); 
+	left: 50px; 
+	padding: 5px 15px;
+	position: absolute; 
+	z-index: 999; 
+	width: 350px; }
+th {
+	background-color: rgb(100,100,100);
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+	border: none; }
+td {
+	border-color: rgba(0,0,0,.2); }
+#truec {background-color: #dff0d8;color:#3c763d;}
+#falsec {background-color: #f2dede;color:#a94442;}
+</style>
+<center><table><tr>
+<th>Test</th><th>Requirement</th><th>Method</th>
+<th>Input</th><th>Oracle</th><th>Output</th><th>Result</th>
+</tr>
+<tr id='colorme1'>
+	<td id='colortext1'>1</td>
+	<td id='colortext1'><a name='url is served by nginx and return 200 OK' class=tooltip><i class='fa fa-external-link'></i></a></td>
+	<td id='colortext1'>served_by_nginx</td>
+	<td id='colortext1'>https://pip.readthedocs.org/en/latest/</td>
+<td id='truec'>True</td>
+<td id='truec'>True</td>
+<td id='colortext1'><i class='fa fa-check'></i></td></tr>
+		<style>#colorme1 {background-color: #dff0d8;} #colortext1 {color:#3c763d;}</style>
+<tr id='colorme2'>
+	<td id='colortext2'>2</td>
+	<td id='colortext2'><a name='url is served by nginx and return 200 OK' class=tooltip><i class='fa fa-external-link'></i></a></td>
+	<td id='colortext2'>served_by_nginx</td>
+	<td id='colortext2'>http://docs.fabfile.org/en/latest/</td>
+<td id='truec'>True</td>
+<td id='truec'>True</td>
+<td id='colortext2'><i class='fa fa-check'></i></td></tr>
+		<style>#colorme2 {background-color: #dff0d8;} #colortext2 {color:#3c763d;}</style>
+<tr id='colorme3'>
+	<td id='colortext3'>3</td>
+	<td id='colortext3'><a name='url is served by nginx and return 200 OK' class=tooltip><i class='fa fa-external-link'></i></a></td>
+	<td id='colortext3'>served_by_nginx</td>
+	<td id='colortext3'>https://pip.readthedocs.org/en/latest/usage.html</td>
+<td id='truec'>True</td>
+<td id='truec'>True</td>
+<td id='colortext3'><i class='fa fa-check'></i></td></tr>
+		<style>#colorme3 {background-color: #dff0d8;} #colortext3 {color:#3c763d;}</style>
+<tr id='colorme4'>
+	<td id='colortext4'>4</td>
+	<td id='colortext4'><a name='url is served by nginx and return 200 OK' class=tooltip><i class='fa fa-external-link'></i></a></td>
+	<td id='colortext4'>served_by_nginx</td>
+	<td id='colortext4'>https://pip.readthedocs.org/en/1.4.1/</td>
+<td id='truec'>True</td>
+<td id='truec'>True</td>
+<td id='colortext4'><i class='fa fa-check'></i></td></tr>
+		<style>#colorme4 {background-color: #dff0d8;} #colortext4 {color:#3c763d;}</style>
+<tr id='colorme5'>
+	<td id='colortext5'>5</td>
+	<td id='colortext5'><a name='url is served by nginx and return 200 OK' class=tooltip><i class='fa fa-external-link'></i></a></td>
+	<td id='colortext5'>served_by_nginx</td>
+	<td id='colortext5'>https://pip.readthedocs.org/en/1.4.1/news.html</td>
+<td id='truec'>True</td>
+<td id='truec'>True</td>
+<td id='colortext5'><i class='fa fa-check'></i></td></tr>
+		<style>#colorme5 {background-color: #dff0d8;} #colortext5 {color:#3c763d;}</style>
+<tr id='colorme6'>
+	<td id='colortext6'>6</td>
+	<td id='colortext6'><a name='url is served by nginx and return 200 OK' class=tooltip><i class='fa fa-external-link'></i></a></td>
+	<td id='colortext6'>served_by_nginx</td>
+	<td id='colortext6'>http://docs.fabfile.org/en/latest/usage/execution.html</td>
+<td id='truec'>True</td>
+<td id='truec'>True</td>
+<td id='colortext6'><i class='fa fa-check'></i></td></tr>
+		<style>#colorme6 {background-color: #dff0d8;} #colortext6 {color:#3c763d;}</style>
+<tr id='colorme7'>
+	<td id='colortext7'>7</td>
+	<td id='colortext7'><a name='url is served by nginx and return 200 OK' class=tooltip><i class='fa fa-external-link'></i></a></td>
+	<td id='colortext7'>served_by_nginx</td>
+	<td id='colortext7'>http://phpmyadmin.readthedocs.org/ja/latest/</td>
+<td id='truec'>True</td>
+<td id='truec'>True</td>
+<td id='colortext7'><i class='fa fa-check'></i></td></tr>
+		<style>#colorme7 {background-color: #dff0d8;} #colortext7 {color:#3c763d;}</style>
+<tr id='colorme8'>
+	<td id='colortext8'>8</td>
+	<td id='colortext8'><a name='url is served by nginx and return 200 OK' class=tooltip><i class='fa fa-external-link'></i></a></td>
+	<td id='colortext8'>served_by_nginx</td>
+	<td id='colortext8'>http://phpmyadmin.readthedocs.org/cs/latest/</td>
+<td id='truec'>True</td>
+<td id='truec'>True</td>
+<td id='colortext8'><i class='fa fa-check'></i></td></tr>
+		<style>#colorme8 {background-color: #dff0d8;} #colortext8 {color:#3c763d;}</style>
+<tr id='colorme9'>
+	<td id='colortext9'>9</td>
+	<td id='colortext9'><a name='url is served by nginx and return 200 OK' class=tooltip><i class='fa fa-external-link'></i></a></td>
+	<td id='colortext9'>served_by_nginx</td>
+	<td id='colortext9'>http://phpmyadmin.readthedocs.org/en/latest/</td>
+<td id='truec'>True</td>
+<td id='truec'>True</td>
+<td id='colortext9'><i class='fa fa-check'></i></td></tr>
+		<style>#colorme9 {background-color: #dff0d8;} #colortext9 {color:#3c763d;}</style>
+<tr id='colorme10'>
+	<td id='colortext10'>10</td>
+	<td id='colortext10'><a name='url is served by nginx and return 200 OK' class=tooltip><i class='fa fa-external-link'></i></a></td>
+	<td id='colortext10'>served_by_nginx</td>
+	<td id='colortext10'>https://ericholschercom.readthedocs.org/en/latest/</td>
+<td id='truec'>True</td>
+<td id='truec'>True</td>
+<td id='colortext10'><i class='fa fa-check'></i></td></tr>
+		<style>#colorme10 {background-color: #dff0d8;} #colortext10 {color:#3c763d;}</style>
+<tr id='colorme11'>
+	<td id='colortext11'>11</td>
+	<td id='colortext11'><a name='url is served by nginx and return 200 OK' class=tooltip><i class='fa fa-external-link'></i></a></td>
+	<td id='colortext11'>served_by_nginx</td>
+	<td id='colortext11'>https://ericholschercom.readthedocs.org/about/</td>
+<td id='truec'>True</td>
+<td id='truec'>True</td>
+<td id='colortext11'><i class='fa fa-check'></i></td></tr>
+		<style>#colorme11 {background-color: #dff0d8;} #colortext11 {color:#3c763d;}</style>
+<tr id='colorme12'>
+	<td id='colortext12'>12</td>
+	<td id='colortext12'><a name='url is served by nginx and return 200 OK' class=tooltip><i class='fa fa-external-link'></i></a></td>
+	<td id='colortext12'>served_by_nginx</td>
+	<td id='colortext12'>https://ericholschercom.readthedocs.org/en/latest/about/</td>
+<td id='truec'>True</td>
+<td id='truec'>True</td>
+<td id='colortext12'><i class='fa fa-check'></i></td></tr>
+		<style>#colorme12 {background-color: #dff0d8;} #colortext12 {color:#3c763d;}</style>
+<tr id='colorme13'>
+	<td id='colortext13'>13</td>
+	<td id='colortext13'><a name='url is served by nginx and return 200 OK' class=tooltip><i class='fa fa-external-link'></i></a></td>
+	<td id='colortext13'>served_by_nginx</td>
+	<td id='colortext13'>http://docs.pylonsproject.org/projects/pyramid/en/latest/</td>
+<td id='truec'>True</td>
+<td id='truec'>True</td>
+<td id='colortext13'><i class='fa fa-check'></i></td></tr>
+		<style>#colorme13 {background-color: #dff0d8;} #colortext13 {color:#3c763d;}</style>
+<tr id='colorme14'>
+	<td id='colortext14'>14</td>
+	<td id='colortext14'><a name='url is served by nginx and return 200 OK' class=tooltip><i class='fa fa-external-link'></i></a></td>
+	<td id='colortext14'>served_by_nginx</td>
+	<td id='colortext14'>http://docs.pylonsproject.org/projects/pyramid-amon/en/latest/genindex.html</td>
+<td id='truec'>True</td>
+<td id='truec'>True</td>
+<td id='colortext14'><i class='fa fa-check'></i></td></tr>
+		<style>#colorme14 {background-color: #dff0d8;} #colortext14 {color:#3c763d;}</style>
+<tr id='colorme15'>
+	<td id='colortext15'>15</td>
+	<td id='colortext15'><a name='url is served by django and return 200 OK' class=tooltip><i class='fa fa-external-link'></i></a></td>
+	<td id='colortext15'>served_by_django</td>
+	<td id='colortext15'>https://readthedocs.org/search/</td>
+<td id='truec'>True</td>
+<td id='truec'>True</td>
+<td id='colortext15'><i class='fa fa-check'></i></td></tr>
+		<style>#colorme15 {background-color: #dff0d8;} #colortext15 {color:#3c763d;}</style>
+<tr id='colorme16'>
+	<td id='colortext16'>16</td>
+	<td id='colortext16'><a name='url is served by django and return 200 OK' class=tooltip><i class='fa fa-external-link'></i></a></td>
+	<td id='colortext16'>served_by_django</td>
+	<td id='colortext16'>https://readthedocs.org/api/v1/?format=json</td>
+<td id='truec'>True</td>
+<td id='truec'>True</td>
+<td id='colortext16'><i class='fa fa-check'></i></td></tr>
+		<style>#colorme16 {background-color: #dff0d8;} #colortext16 {color:#3c763d;}</style>
+<tr id='colorme17'>
+	<td id='colortext17'>17</td>
+	<td id='colortext17'><a name='url is served by django and return 200 OK' class=tooltip><i class='fa fa-external-link'></i></a></td>
+	<td id='colortext17'>served_by_django</td>
+	<td id='colortext17'>https://readthedocs.org/accounts/login/</td>
+<td id='truec'>True</td>
+<td id='truec'>True</td>
+<td id='colortext17'><i class='fa fa-check'></i></td></tr>
+		<style>#colorme17 {background-color: #dff0d8;} #colortext17 {color:#3c763d;}</style>
+<tr id='colorme18'>
+	<td id='colortext18'>18</td>
+	<td id='colortext18'><a name='url is served by django and return 200 OK' class=tooltip><i class='fa fa-external-link'></i></a></td>
+	<td id='colortext18'>served_by_django</td>
+	<td id='colortext18'>https://readthedocs.org/accounts/login/</td>
+<td id='truec'>True</td>
+<td id='truec'>True</td>
+<td id='colortext18'><i class='fa fa-check'></i></td></tr>
+		<style>#colorme18 {background-color: #dff0d8;} #colortext18 {color:#3c763d;}</style>
+<tr id='colorme19'>
+	<td id='colortext19'>19</td>
+	<td id='colortext19'><a name='url is served by perl and return 200 OK' class=tooltip><i class='fa fa-external-link'></i></a></td>
+	<td id='colortext19'>served_by_perl</td>
+	<td id='colortext19'>http://www.perl.org/</td>
+<td id='falsec'>False</td>
+<td id='falsec'>False</td>
+<td id='colortext19'><i class='fa fa-check'></i></td></tr>
+		<style>#colorme19 {background-color: #dff0d8;} #colortext19 {color:#3c763d;}</style>
+<tr id='colorme20'>
+	<td id='colortext20'>20</td>
+	<td id='colortext20'><a name='url is served by perl and return 200 OK' class=tooltip><i class='fa fa-external-link'></i></a></td>
+	<td id='colortext20'>served_by_perl</td>
+	<td id='colortext20'>https://ericholschercom.readthedocs.org/</td>
+<td id='falsec'>False</td>
+<td id='falsec'>False</td>
+<td id='colortext20'><i class='fa fa-check'></i></td></tr>
+		<style>#colorme20 {background-color: #dff0d8;} #colortext20 {color:#3c763d;}</style>
+<tr id='colorme21'>
+	<td id='colortext21'>21</td>
+	<td id='colortext21'><a name='url is served by perl and return 200 OK' class=tooltip><i class='fa fa-external-link'></i></a></td>
+	<td id='colortext21'>served_by_perl</td>
+	<td id='colortext21'>http://www.microsoft.com</td>
+<td id='falsec'>False</td>
+<td id='falsec'>False</td>
+<td id='colortext21'><i class='fa fa-check'></i></td></tr>
+		<style>#colorme21 {background-color: #dff0d8;} #colortext21 {color:#3c763d;}</style>
+<tr id='colorme22'>
+	<td id='colortext22'>22</td>
+	<td id='colortext22'><a name='url is served by nginx and return 200 OK' class=tooltip><i class='fa fa-external-link'></i></a></td>
+	<td id='colortext22'>served_by_nginx</td>
+	<td id='colortext22'>http://www.microsoft.com</td>
+<td id='falsec'>False</td>
+<td id='falsec'>False</td>
+<td id='colortext22'><i class='fa fa-check'></i></td></tr>
+		<style>#colorme22 {background-color: #dff0d8;} #colortext22 {color:#3c763d;}</style>
+<tr id='colorme23'>
+	<td id='colortext23'>23</td>
+	<td id='colortext23'><a name='url is served by perl and return 200 OK' class=tooltip><i class='fa fa-external-link'></i></a></td>
+	<td id='colortext23'>served_by_perl</td>
+	<td id='colortext23'>http://my.cofc.edu</td>
+<td id='falsec'>False</td>
+<td id='falsec'>False</td>
+<td id='colortext23'><i class='fa fa-check'></i></td></tr>
+		<style>#colorme23 {background-color: #dff0d8;} #colortext23 {color:#3c763d;}</style>
+<tr id='colorme24'>
+	<td id='colortext24'>24</td>
+	<td id='colortext24'><a name='url is served by nginx and return 200 OK' class=tooltip><i class='fa fa-external-link'></i></a></td>
+	<td id='colortext24'>served_by_nginx</td>
+	<td id='colortext24'>http://my.cofc.edu</td>
+<td id='falsec'>False</td>
+<td id='falsec'>False</td>
+<td id='colortext24'><i class='fa fa-check'></i></td></tr>
+		<style>#colorme24 {background-color: #dff0d8;} #colortext24 {color:#3c763d;}</style>
+<tr id='colorme25'>
+	<td id='colortext25'>25</td>
+	<td id='colortext25'><a name='url is served by django and return 200 OK' class=tooltip><i class='fa fa-external-link'></i></a></td>
+	<td id='colortext25'>served_by_django</td>
+	<td id='colortext25'>http://my.cofc.edu</td>
+<td id='truec'>True</td>
+<td id='truec'>True</td>
+<td id='colortext25'><i class='fa fa-check'></i></td></tr>
+		<style>#colorme25 {background-color: #dff0d8;} #colortext25 {color:#3c763d;}</style>
+</table>

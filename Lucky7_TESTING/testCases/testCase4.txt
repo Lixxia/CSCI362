@@ -1,5 +1,5 @@
-2
+4
 url is served by nginx and return 200 OK
 served_by_nginx
-http://docs.fabfile.org/en/latest/
+https://pip.readthedocs.org/en/1.4.1/
 True

@@ -1,5 +1,5 @@
-2
+24
 url is served by nginx and return 200 OK
 served_by_nginx
-http://docs.fabfile.org/en/latest/
-True
+http://my.cofc.edu
+False
