@@ -10,47 +10,10 @@ else
 	echo "Temp folder is already empty."
 fi
 
-# Static html elements and css styling (headers, need only once.)
-echo "
-<link href='http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css' 
-rel='stylesheet'>
-<style> 
-table, th, td {
-	border: 1px solid black;
-	border-collapse: collapse; }
-th, td {
-	padding: 5px;
-	text-align: center; }
-.tooltip {
-	display:inline;
-	position:relative; }
-.tooltip:hover:after { 
-	background:#333; 
-	background:rgba(0,0,0,.8); 
-	border-radius: 5px;
-	bottom: -3px; 
-	color: #fff;
-	content: attr(name); 
-	left: 50px; 
-	padding: 5px 15px;
-	position: absolute; 
-	z-index: 999; 
-	width: 350px; }
-th {
-	background-color: rgb(100,100,100);
-    color: white;
-    padding: 10px 10px;
-    text-align: center;
-	border: none; }
-td {
-	border-color: rgba(0,0,0,.2); }
-#truec {background-color: #dff0d8;color:#3c763d;}
-#falsec {background-color: #f2dede;color:#a94442;}
-</style>" >> temp/output.html
-echo "<center><table><tr>
-<th>Test</th><th>Requirement</th><th>Method</th>
-<th>Input</th><th>Oracle</th><th>Output</th><th>Result</th>
-</tr>" >> temp/output.html
+# Static html elements and css styling
+while read LINE; do
+	echo "$LINE" >> temp/output.html
+done < "reports/style.css" 
 
 # perform these actions 25 times, once for each test.
 for i in `seq 1 25`; do
@@ -76,7 +39,7 @@ for i in `seq 1 25`; do
 	fi
 
 
-	# running actual test and receiving output
+	# running actual test and receiving output, must cd for test.py to work
 	cd testCasesExecutables/
 	OUTPUT=$(python test.py ${ARRAY[2]} ${ARRAY[3]})
 	# also t/f color these fields in the table
@@ -85,10 +48,10 @@ for i in `seq 1 25`; do
 	else
 		echo "<td id='falsec'>$OUTPUT</td>" >> ../temp/output.html
 	fi
-	# echo "<td id='colortext$i'>$OUTPUT</td>" >> ../temp/output.html
 	cd ..
 
-	# Check if test passed or failed by comparing to oracle
+	# Check if test passed or failed by comparing to oracle and output result in table
+	# color entire row and show icon based on pass/fail
 	if [ "${ARRAY[4]}" == "$OUTPUT" ]; then
 		echo "<td id='colortext$i'><i class='fa fa-check'></i></td></tr>
 		<style>#colorme$i {background-color: #dff0d8;} #colortext$i {color:#3c763d;}</style>" >> temp/output.html
