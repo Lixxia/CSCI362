@@ -3,3 +3,4 @@ url is served by nginx and return 200 OK
 served_by_nginx
 https://ericholschercom.readthedocs.org/about/
 True
+
