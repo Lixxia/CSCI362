@@ -15,8 +15,13 @@ while read LINE; do
 	echo "$LINE" >> temp/output.html
 done < "reports/style.css" 
 
+# rewrite this to walk through folder instead of hardcoding a loop -> pre-pend 0 to single digit tests
+# for file in bleh
 # perform these actions 25 times, once for each test.
-for i in `seq 1 25`; do
+NUMFILES="$(ls -1 testCases/ | wc -l)"
+echo "$NUMFILES"
+
+for i in `seq 1 "$NUMFILES"`; do
 	echo "Performing test $i."
 	FILE="testCases/testCase$i.txt"
 	# create an array and populate it with contents of testCase file
