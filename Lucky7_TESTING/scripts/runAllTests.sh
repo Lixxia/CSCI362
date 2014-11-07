@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # check if temp directory is empty. If not, remove files.
-FILE=""
 DIR="temp/"
 if [ "$(ls -A $DIR)" ]; then
 	echo "Removing files from temp folder."
@@ -15,20 +14,16 @@ while read LINE; do
 	echo "$LINE" >> temp/output.html
 done < "reports/style.css" 
 
-# rewrite this to walk through folder instead of hardcoding a loop -> pre-pend 0 to single digit tests
-# for file in bleh
 # perform these actions 25 times, once for each test.
-NUMFILES="$(ls -1 testCases/ | wc -l)"
-echo "$NUMFILES"
-
-for i in `seq 1 "$NUMFILES"`; do
+# loops through all files contained in testCases directory.
+for filename in testCases/*.txt; do
+	i="${filename//[^0-9]/}"
 	echo "Performing test $i."
-	FILE="testCases/testCase$i.txt"
 	# create an array and populate it with contents of testCase file
 	ARRAY=()
 	while read LINE; do
 		ARRAY+=("$LINE")
-	done < "$FILE"
+	done < "$filename"
 
 	# creating the table row in output.html with appropriate information
 	echo "<tr id='colorme$i'>
@@ -42,7 +37,6 @@ for i in `seq 1 "$NUMFILES"`; do
 	else
 		echo "<td id='falsec'>${ARRAY[4]}</td>" >> temp/output.html
 	fi
-
 
 	# running actual test and receiving output, must cd for test.py to work
 	cd testCasesExecutables/
