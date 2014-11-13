@@ -8,10 +8,6 @@ import requests
 TESTS = 0
 FAILS = 0
 
-
-def hello():
-    return 'Hello world'
-
 def served_by_nginx(url):
     """Return True if url returns 200 and is served by Nginx."""
     r = requests.get(url, allow_redirects=False)
