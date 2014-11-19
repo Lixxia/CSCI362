@@ -15,12 +15,12 @@ The project is structured such that the bash script `runAllTests.sh` will read t
 
 # Requirements
 Python 2.7.6
-(Check using python --version)
+(Check using `python --version`)
 Ubuntu 14.04
 Pip
 
 # Install dependencies 
-sudo apt-get install python-pip
+`sudo apt-get install python-pip`
 
 *Note:* Given that we are only testing a small portion of the *ReadTheDocs*project, we only need to cover a few of its dependencies. These are automatically managed by installing pip (python package manager) using the above command.
 
