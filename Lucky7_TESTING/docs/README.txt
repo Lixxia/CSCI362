@@ -1,7 +1,10 @@
 # Requirements
 Python 2.7.6
+
 (Check using python --version)
+
 Ubuntu 14.04
+
 Pip
 
 # Install dependencies 
