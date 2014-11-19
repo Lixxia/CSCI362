@@ -15,8 +15,11 @@ The project is structured such that the bash script `runAllTests.sh` will read t
 
 # Requirements
 Python 2.7.6
+
 (Check using `python --version`)
+
 Ubuntu 14.04
+
 Pip
 
 # Install dependencies 
